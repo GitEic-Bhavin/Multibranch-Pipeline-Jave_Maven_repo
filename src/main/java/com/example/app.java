@@ -3,6 +3,6 @@ package com.example;
 
 public class App {
     public static void main(String[] args) {
-        System.out.println("Hello Maven from production branch");
+        System.out.println("Hello Maven from staging branch");
     }
 }
