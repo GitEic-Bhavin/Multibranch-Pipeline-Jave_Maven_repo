@@ -32,7 +32,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Running App.java....'
-                sh 'javac /src/main/java/com/example/App.java'
+                sh 'javac src/main/java/com/example/App.java'
                 sh 'java App.java'
             }
         }
