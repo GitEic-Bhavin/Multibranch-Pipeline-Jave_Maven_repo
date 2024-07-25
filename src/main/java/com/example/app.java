@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package com.example;
 
 public class App {
