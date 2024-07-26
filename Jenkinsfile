@@ -8,7 +8,8 @@ pipeline {
      stages {
         stage('Checkout') {
             steps {
-                git branch: 'staging', git url: 'https://github.com/GitEic-Bhavin/Multibranch-Pipeline-Jave_Maven_repo.git'
+                git branch: 'staging', url: 'https://github.com/GitEic-Bhavin/Multibranch-Pipeline-Jave_Maven_repo.git'
+
                 //    git branch: 'Maven', credentialsId: 'e668b39d-feb9-4dad-983e-03be1e13a953', url: 'https://github.com/GitEic-Bhavin/JenkinsPrivateRepo.git'                                                                                         
             }
         }
