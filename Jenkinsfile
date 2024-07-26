@@ -29,20 +29,20 @@ pipeline {
             }
         }
 
-        // stage('Deploy') {
-        //     steps {
-        //         echo 'Running App.java....'
-        //         sh 'javac src/main/java/com/example/App.java'
-        //         sh 'java App.java'
-        //     }
-        // }
+        stage('Deploy') {
+            steps {
+                echo 'Running App.java....'
+                // sh 'javac src/main/java/com/example/App.java'
+                sh 'java /src/main/java/com/example/App.java'
+            }
+        }
+
 
         stage('Archiveartifact') {
             steps {
                 archiveArtifacts artifacts: '**/target/*.jar', allowEmptyArchive: true
             }
         }
-
         
 
     }
