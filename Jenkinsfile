@@ -33,7 +33,7 @@ pipeline {
             steps {
                 echo 'Running App.java....'
                 // sh 'javac src/main/java/com/example/App.java'
-                sh 'java /src/main/java/com/example/App.java'
+                sh 'java src/main/java/com/example/App.java'
             }
         }
 
