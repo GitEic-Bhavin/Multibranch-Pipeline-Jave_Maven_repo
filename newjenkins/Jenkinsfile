@@ -32,7 +32,7 @@ pipeline {
 
         stage('Deploy') {
             when {
-                branch env.BRANCH_NAME
+                branch env.BRANCH_NAME == 'staging'
             }
             steps {
                 echo 'Running App.java....'
