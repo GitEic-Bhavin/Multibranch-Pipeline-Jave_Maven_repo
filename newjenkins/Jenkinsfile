@@ -8,7 +8,7 @@ pipeline {
      stages {
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/GitEic-Bhavin/Multibranch-Pipeline-Jave_Maven_repo.git', branch: env.BRANCH_NAME
+                git url: 'https://github.com/GitEic-Bhavin/Multibranch-Pipeline-Jave_Maven_repo.git', branch: env.Branch_Name
                 // git branch: 'production', url: 'https://github.com/GitEic-Bhavin/Multibranch-Pipeline-Jave_Maven_repo.git'
                 //    git branch: 'Maven', credentialsId: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx', url: 'https://github.com/GitEic-Bhavin/JenkinsPrivateRepo.git'                                                                                         
             }
@@ -32,7 +32,7 @@ pipeline {
 
         stage('Deploy') {
             when {
-                branch env.BRANCH_NAME
+                branch 'staging'
             }
             steps {
                 echo 'Running App.java....'
