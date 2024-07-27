@@ -8,8 +8,8 @@ pipeline {
      stages {
         stage('Checkout') {
             steps {
-                // git url: 'https://github.com/GitEic-Bhavin/Multibranch-Pipeline-Jave_Maven_repo.git', branch: env.BRANCH_NAME
-                git branch: 'production', url: 'https://github.com/GitEic-Bhavin/Multibranch-Pipeline-Jave_Maven_repo.git'
+                git url: 'https://github.com/GitEic-Bhavin/Multibranch-Pipeline-Jave_Maven_repo.git', branch: env.BRANCH_NAME
+                // git branch: 'production', url: 'https://github.com/GitEic-Bhavin/Multibranch-Pipeline-Jave_Maven_repo.git'
                 //    git branch: 'Maven', credentialsId: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx', url: 'https://github.com/GitEic-Bhavin/JenkinsPrivateRepo.git'                                                                                         
             }
         }
@@ -31,12 +31,22 @@ pipeline {
         }
 
         stage('Deploy') {
+            when {
+                branch 'production'
+            }
             steps {
                 echo 'Running App.java....'
-                // sh 'javac src/main/java/com/example/App.java'
                 sh 'java src/main/java/com/example/App.java'
             }
         }
+
+        // stage('Deploy') {
+        //     steps {
+        //         echo 'Running App.java....'
+        //         // sh 'javac src/main/java/com/example/App.java'
+        //         sh 'java src/main/java/com/example/App.java'
+        //     }
+        // }
 
 
         stage('Archiveartifact') {
