@@ -10,7 +10,7 @@ pipeline {
             steps {
                 // git url: 'https://github.com/GitEic-Bhavin/Multibranch-Pipeline-Jave_Maven_repo.git'
                 git branch: 'development', url: 'https://github.com/GitEic-Bhavin/Multibranch-Pipeline-Jave_Maven_repo.git'
-                //    git branch: 'Maven', credentialsId: 'e668b39d-feb9-4dad-983e-03be1e13a953', url: 'https://github.com/GitEic-Bhavin/JenkinsPrivateRepo.git'                                                                                         
+                //    git branch: 'Maven', credentialsId: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx', url: 'https://github.com/GitEic-Bhavin/JenkinsPrivateRepo.git'                                                                                         
             }
         }
         // stage ('Clone Repo') {
