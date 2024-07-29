@@ -35,7 +35,7 @@ pipeline {
             //     branch 'production'
             // }
             steps {
-                echo 'Running App.java....'
+                echo "Running App.java.... ${BRANCH_NASME}"
                 sh 'java src/main/java/com/example/App.java'
             }
         }
